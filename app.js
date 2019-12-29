@@ -25,19 +25,43 @@ const findLinks = async starting_url => {
   try {
     const response = await got(starting_url)
     const $ = cheerio.load(response.body)
-    const links = $('a')
+
+    const articalName = $('h1').text()
+    const body = $('div .mw-parser-output')
+    const links = body.find('a')
 
     $(links).each(function(i, link) {
       const link_adress = $(link).attr('href')
-      if (link_adress != undefined && link_adress.includes('https://')) {
+
+      //  console.log(link_adress)
+      if (
+        link_adress != undefined &&
+        link_adress.includes('/wiki/') &&
+        !link_adress.includes('https://')
+      ) {
         linkArray.push(link_adress)
       }
     })
+
+    saveLinks(articalName, linkArray)
   } catch (error) {
     console.error(error)
   }
 
-  storeRAWHTML(linkArray)
+  storeRAWHTML(linkArray, starting_url)
+}
+
+const saveLinks = (articalName, linkArray) => {
+  fs.writeFile(
+    `./Links/${articalName}.txt`,
+    linkArray.map(link => link + '\n'),
+    err => {
+      if (err) {
+        return console.log(err)
+      }
+      console.log('The file was saved!')
+    }
+  )
 }
 
 /* 
@@ -45,11 +69,12 @@ While count is below 200 ( max_pax_count )
 Store raw html and crawl for new links
 */
 
-const storeRAWHTML = linkArray => {
+const storeRAWHTML = (linkArray, starting_url) => {
+  const wiki_url = 'https://en.wikipedia.org/'
   while (count < MAX_PAGE_COUNT) {
     linkArray.map(link =>
-      fetchHTML(link).then(() => {
-        findLinks(link)
+      fetchHTML(wiki_url + link, starting_url).then(() => {
+        findLinks(wiki_url + link)
       })
     )
   }
@@ -59,9 +84,12 @@ const storeRAWHTML = linkArray => {
 Store RAW HTML in ./rawHTML folder
 */
 
-const fetchHTML = async link => {
+const fetchHTML = async (link, starting_url) => {
   count++
+  let wiki = link.indexOf('/wiki')
+  let folderName = starting_url.indexOf('Gaming')
 
+  //console.log(link)
   while (count < MAX_PAGE_COUNT) {
     try {
       await pipeline(
