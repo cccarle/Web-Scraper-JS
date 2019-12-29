@@ -33,7 +33,6 @@ const findLinks = async starting_url => {
     $(links).each(function(i, link) {
       const link_adress = $(link).attr('href')
 
-      //  console.log(link_adress)
       if (
         link_adress != undefined &&
         link_adress.includes('/wiki/') &&
@@ -49,9 +48,11 @@ const findLinks = async starting_url => {
   }
 
   storeRAWHTML(linkArray, starting_url)
+  linkArray = []
 }
 
 const saveLinks = (articalName, linkArray) => {
+  console.log(linkArray)
   fs.writeFile(
     `./Links/${articalName}.txt`,
     linkArray.map(link => link + '\n'),
@@ -59,7 +60,7 @@ const saveLinks = (articalName, linkArray) => {
       if (err) {
         return console.log(err)
       }
-      console.log('The file was saved!')
+      //console.log(`The file ${articalName} was saved!`)
     }
   )
 }
