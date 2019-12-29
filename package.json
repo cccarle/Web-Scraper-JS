@@ -1,0 +1,31 @@
+{
+  "name": "2dv515_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cccarle/2DV515_project.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Carl Ejnarsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cccarle/2DV515_project/issues"
+  },
+  "homepage": "https://github.com/cccarle/2DV515_project#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "got": "^10.2.0",
+    "nodemon": "^2.0.2",
+    "stream": "0.0.2",
+    "util": "^0.12.1"
+  }
+}
