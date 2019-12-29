@@ -1,53 +1,60 @@
-const got = require('got')
-const fs = require('fs')
-const stream = require('stream')
 const { promisify } = require('util')
+const fs = require('fs')
+const got = require('got')
+const stream = require('stream')
 const pipeline = promisify(stream.pipeline)
 const cheerio = require('cheerio')
 
-const links = 'https://sindresorhus.com'
+const starting_link = 'https://en.wikipedia.org/wiki/Gaming'
 const MAX_PAGE_COUNT = 200
-const count = 0
+
+let count = -1
 let linkArray = []
-const start = async () => {
-  await fetchHTML(links, count)
-  await findLinks()
+
+const start = async starting_link => {
+  await findLinks(starting_link)
 }
 
-const findLinks = async () => {
+const findLinks = async starting_link => {
   try {
-    const response = await got('https://sindresorhus.com')
+    const response = await got(starting_link)
     const $ = cheerio.load(response.body)
     const links = $('a') // get all hyperlinks
 
     $(links).each(function(i, link) {
-      // console.log($(link).attr('href'))
-
-      if (
-        $(link).attr('href') != undefined &&
-        $(link)
-          .attr('href')
-          .includes('https://')
-      ) {
-        linkArray.push($(link).attr('href'))
+      const link_adress = $(link).attr('href')
+      if (link_adress != undefined && link_adress.includes('https://')) {
+        linkArray.push(link_adress)
       }
     })
   } catch (error) {
-    console.log(error.response.body)
+    console.error(error)
   }
 
   console.log(linkArray)
-}
 
-const fetchHTML = async (link, count) => {
-  try {
-    const response = await pipeline(
-      got.stream(link),
-      fs.createWriteStream('./rawHTML/index.html')
+  while (count < MAX_PAGE_COUNT) {
+    linkArray.map(link =>
+      fetchHTML(link).then(() => {
+        findLinks(link)
+      })
     )
-  } catch (error) {
-    console.error(error)
   }
 }
 
-start()
+const fetchHTML = async link => {
+  count++
+
+  while (count < MAX_PAGE_COUNT) {
+    try {
+      await pipeline(
+        got.stream(link),
+        fs.createWriteStream(`./rawHTML/index${count}.html`)
+      )
+    } catch (error) {
+      console.error(error)
+    }
+  }
+}
+
+start(starting_link)
