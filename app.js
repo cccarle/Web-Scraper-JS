@@ -5,21 +5,27 @@ const stream = require('stream')
 const pipeline = promisify(stream.pipeline)
 const cheerio = require('cheerio')
 
-const starting_link = 'https://en.wikipedia.org/wiki/Gaming'
+const starting_url = 'https://en.wikipedia.org/wiki/Gaming'
 const MAX_PAGE_COUNT = 200
 
 let count = -1
 let linkArray = []
 
-const start = async starting_link => {
-  await findLinks(starting_link)
+const start = async starting_url => {
+  await findLinks(starting_url)
 }
 
-const findLinks = async starting_link => {
+/* 
+Find all links from starting_url,
+Crawl to all hrefs the starting_url include
+Stores the links raw html.
+*/
+
+const findLinks = async starting_url => {
   try {
-    const response = await got(starting_link)
+    const response = await got(starting_url)
     const $ = cheerio.load(response.body)
-    const links = $('a') // get all hyperlinks
+    const links = $('a')
 
     $(links).each(function(i, link) {
       const link_adress = $(link).attr('href')
@@ -31,8 +37,15 @@ const findLinks = async starting_link => {
     console.error(error)
   }
 
-  console.log(linkArray)
+  storeRAWHTML(linkArray)
+}
 
+/* 
+While count is below 200 ( max_pax_count ) 
+Store raw html and crawl for new links
+*/
+
+const storeRAWHTML = linkArray => {
   while (count < MAX_PAGE_COUNT) {
     linkArray.map(link =>
       fetchHTML(link).then(() => {
@@ -41,6 +54,10 @@ const findLinks = async starting_link => {
     )
   }
 }
+
+/* 
+Store RAW HTML in ./rawHTML folder
+*/
 
 const fetchHTML = async link => {
   count++
@@ -57,4 +74,4 @@ const fetchHTML = async link => {
   }
 }
 
-start(starting_link)
+start(starting_url)
