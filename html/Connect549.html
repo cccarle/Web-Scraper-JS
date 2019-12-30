@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Gomoku - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRequestId":"Xgm@8gpAMFYAAB5drHsAAACO","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Gomoku","wgTitle":"Gomoku","wgCurRevisionId":933127951,"wgRevisionId":933127951,"wgArticleId":12902,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 Chinese-language sources (zh)","Pages using deprecated image syntax","Articles containing Japanese-language text","Articles needing additional references from August 2007","All articles needing additional references",
+"Abstract strategy games","Traditional board games","Japanese games","Japanese inventions","Paper-and-pencil games","PSPACE-complete problems","In-a-row games","Solved games"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Gomoku","wgRelevantArticleId":12902,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Connect_5","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Gomoku","wgWikibaseItemId":"Q908381","wgCentralAuthMobileDomain":!1,
+"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.startup","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar",
+"ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.11"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/6/69/Renju.jpg"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Gomoku"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Gomoku&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Gomoku&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Gomoku"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Gomoku rootpage-Gomoku skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en"><i>Gomoku</i></h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Connect_5&amp;redirect=no" class="mw-redirect" title="Connect 5">Connect 5</a>)</span></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox" style="width:22em"><caption><i>Gomoku</i></caption><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:Renju.jpg" class="image"><img alt="Renju.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Renju.jpg/200px-Renju.jpg" decoding="async" width="200" height="199" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Renju.jpg/300px-Renju.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/69/Renju.jpg/400px-Renju.jpg 2x" data-file-width="603" data-file-height="599" /></a></td></tr><tr><th scope="row">Genre(s)</th><td><a href="/wiki/Board_game" title="Board game">Board game</a> <br /><a href="/wiki/Abstract_strategy_game" title="Abstract strategy game">Abstract strategy game</a></td></tr><tr><th scope="row">Players</th><td>2</td></tr><tr><th scope="row">Setup time</th><td>Minimal</td></tr><tr><th scope="row">Random chance</th><td>None</td></tr><tr><th scope="row">Skill(s) required</th><td><a href="/wiki/Strategy_game" title="Strategy game">Strategy</a>, tactics</td></tr></tbody></table>
+<p><i><b>Gomoku</b></i>, also called <i>Five in a Row</i>, is an <a href="/wiki/Abstract_strategy" class="mw-redirect" title="Abstract strategy">abstract strategy</a> <a href="/wiki/Board_game" title="Board game">board game</a>. It is traditionally played with <a href="/wiki/Go_(game)" title="Go (game)">Go</a> pieces (black and white stones) on a Go board. It can be played using the 15×15 board<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> or the 19×19 board<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>. Because pieces are typically not moved or removed from the board, Gomoku may also be played as a <a href="/wiki/Paper-and-pencil_game" title="Paper-and-pencil game">paper-and-pencil game</a>. The game is known in several countries under different names.
+</p><p>Players alternate turns placing a stone of their color on an empty intersection. The winner is the first player to form an unbroken chain of five stones horizontally, vertically, or diagonally.
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Origin"><span class="tocnumber">1</span> <span class="toctext">Origin</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Official_rules"><span class="tocnumber">2</span> <span class="toctext">Official rules</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Variations"><span class="tocnumber">3</span> <span class="toctext">Variations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Optional_(&quot;house&quot;)_rules"><span class="tocnumber">3.1</span> <span class="toctext">Optional ("house") rules</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Specific_variations"><span class="tocnumber">3.2</span> <span class="toctext">Specific variations</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Theoretical_generalizations"><span class="tocnumber">3.3</span> <span class="toctext">Theoretical generalizations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Example_game"><span class="tocnumber">4</span> <span class="toctext">Example game</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#World_championships"><span class="tocnumber">5</span> <span class="toctext">World championships</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Computers_and_Gomoku"><span class="tocnumber">6</span> <span class="toctext">Computers and Gomoku</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Further_reading"><span class="tocnumber">9</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Origin">Origin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=1" title="Edit section: Origin">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Gomoku has existed in Japan since the <a href="/wiki/Meiji_Restoration" title="Meiji Restoration">Meiji Restoration</a>.<sup id="cite_ref-hzx_3-0" class="reference"><a href="#cite_note-hzx-3">&#91;3&#93;</a></sup> The name "Gomoku" is from the <a href="/wiki/Japanese_language" title="Japanese language">Japanese language</a>, in which it is referred to as <i>gomokunarabe</i><span style="font-weight: normal"> (<span lang="ja" title="Japanese language text">五目並べ</span>)</span>. <i>Go</i> means <a href="/wiki/5" title="5">five</a>, <i>moku</i> is a <a href="/wiki/Japanese_counter_word" title="Japanese counter word">counter word</a> for <a href="/wiki/Go_stone" class="mw-redirect" title="Go stone">pieces</a> and <i>narabe</i> means <i>line-up</i>. The game is also popular in <a href="/wiki/Korea" title="Korea">Korea</a>, where it is called <i>omok</i> (오목 [五目]) which has the same structure and origin as the Japanese name.
+</p><p>In the nineteenth century, the game was introduced to Britain where it was known as <b>Go Bang</b>, said to be a corruption of the Japanese word <i><a href="/wiki/Go_board" class="mw-redirect" title="Go board">goban</a></i>, said to be adopted from Chinese <i>k'i pan (qí pán)</i> "go-board."<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Official_rules">Official rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=2" title="Edit section: Official rules">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Besides many variations around the world, the <b>Swap2</b> rule (based on "swap" from <a href="/wiki/Renju" title="Renju">Renju</a>) is currently adapted in tournaments among professional players, including Gomoku World Championships.
+</p><p>In Swap2 rule, the first player starts by placing three stones (2 black and 1 white, if black goes first) on the board.  The second player then selects one of three options: play black, play white and place one more stone, or place two more stones to and let the first player choose the color.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> This is essentially a slightly more elaborate <a href="/wiki/Pie_rule" title="Pie rule">pie rule</a>.
+</p><p>Swap2 solved the low complexity problem<sup id="cite_ref-:0_7-0" class="reference"><a href="#cite_note-:0-7">&#91;7&#93;</a></sup> and makes the game fairer. Like other rules and variations, 100% fairness can be reached by playing two alternating games for each point.
+</p>
+<h2><span class="mw-headline" id="Variations">Variations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=3" title="Edit section: Variations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Gomoku&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Gomoku%22">"Gomoku"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Gomoku%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Gomoku%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Gomoku%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Gomoku%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Gomoku%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">August 2007</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>Most variations are based on either <b>Free-style gomoku</b> or <b>Standard gomoku</b>.
+</p>
+<ul><li><b>Free-style gomoku</b> requires a row of five or more stones for a win.</li>
+<li><b>Standard gomoku</b> requires a row of exactly five stones for a win: rows of six or more, called <b>overlines</b>, do not count.</li></ul>
+<h3><span id="Optional_.28.22house.22.29_rules"></span><span class="mw-headline" id="Optional_(&quot;house&quot;)_rules">Optional ("house") rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=4" title="Edit section: Optional (&quot;house&quot;) rules">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Black (the player who makes the first move) was long known to have a big advantage, even before L. Victor Allis proved that black could force a win (see below). So a number of variations are played with extra rules that aimed to reduce black's advantage.
+</p>
+<ul><li>The rule of <b>three and three</b> bans a move that simultaneously forms two open rows of three stones (rows not blocked by an opponent's stone at either end).</li>
+<li>The rule of <b>four and four</b> bans a move that simultaneously forms two rows of four stones (open or not).</li>
+<li>Alternatively, a handicap may be given such that after the first "three and three" play has been made, the opposing player may place two stones as their next turn. These stones must block an opponent's row of three.</li>
+<li>Efforts to improve fairness by reducing first-move advantage include the rule of <b>swap</b>, generalizable as "swap-(<i>x</i>,<i>y</i>,<i>z</i>)" and characterizable as a partially compounded and partially iterated version of the <a href="/wiki/Pie_rule" title="Pie rule">pie rule</a> ("one person slices; the other chooses"):  One player places on the board <i>x</i> stones of the first-moving color and a lesser number <i>y</i> stones of the second-moving color ("slicing" in the pie metaphor); the other player is entitled to choose between <i>a</i>) playing from the starting position, in which case the selecting player is also entitled to choose which color to play, and <i>b</i>) placing <i>z</i> (usually [(x - y) + 1]) more stones on the board at locations of that player's choice ("reslicing" in the pie metaphor, with limitations created by the board's existing setup akin to limitations arising from the existing slices in the pie), in which case the former player is entitled to choose which color side to play on.</li></ul>
+<h3><span class="mw-headline" id="Specific_variations">Specific variations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=5" title="Edit section: Specific variations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><b><a href="/wiki/Renju" title="Renju">Renju</a></b> is played on a 15×15 board, with the rules of three and three, four and four, and overlines applied to Black only and with opening rules, some of which are following the <i>swap</i> pattern.</li>
+<li>In <b>Caro</b> (also called Gomoku+, popular among Indian</li></ul>
+<p>), the winner must have an overline or an unbroken row of <b>both</b> ends (overlines are immuned to this rule). This makes Gomoku more balanced and provides more power for White to defend.
+</p>
+<ul><li><b>Omok</b> is played the same as Standard Gomoku; however, it is played on a 19×19 board and include the rule of <i>three and three</i>. The <b>overlines</b> rules, do not count.</li>
+<li><b>Ninuki-renju</b> or <b>Wu</b> is a variant which adds capturing to the game; it was published in the USA in a slightly simplified form under the name renju.</li></ul>
+<h3><span class="mw-headline" id="Theoretical_generalizations">Theoretical generalizations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=6" title="Edit section: Theoretical generalizations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/M,n,k-game" title="M,n,k-game"><i>m</i>,<i>n</i>,<i>k</i>-games</a> are a <a href="/wiki/Generalized_game" title="Generalized game">generalization</a> of gomoku to a board with <i>m</i>×<i>n</i> intersections, and <i>k</i> in a row needed to win.</li>
+<li>Connect(<i>m</i>,<i>n</i>,<i>k</i>,<i>p</i>,<i>q</i>) games are another <a href="/wiki/Generalized_game" title="Generalized game">generalization</a> of gomoku to a board with <i>m</i>×<i>n</i> intersections, <i>k</i> in a row needed to win, <i>p</i> stones for each player to place, and <i>q</i> stones for the first player to place for the first move only. Each player may play only at the lowest unoccupied place in a column. In particular, Connect(<i>m</i>,<i>n</i>,6,2,1) is called <a href="/wiki/Connect6" title="Connect6">Connect6</a>.</li></ul>
+<h2><span class="mw-headline" id="Example_game">Example game</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=7" title="Edit section: Example game">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Gomoku-game-1.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Gomoku-game-1.svg/300px-Gomoku-game-1.svg.png" decoding="async" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Gomoku-game-1.svg/450px-Gomoku-game-1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Gomoku-game-1.svg/600px-Gomoku-game-1.svg.png 2x" data-file-width="566" data-file-height="566" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Gomoku-game-1.svg" class="internal" title="Enlarge"></a></div>First game</div></div></div>
+<p>This game on the 15×15 board is adapted from the paper "Go-Moku and Threat-Space Search".<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p><p>The opening moves show clearly black's advantage. An open row of three (one that is not blocked by an opponent's stone at either end) has to be blocked immediately, or countered with a threat elsewhere on the board. If not blocked or countered, the open row of three will be extended to an open row of four, which threatens to win in two ways.
+</p><p>White has to block open rows of three at moves 10, 14, 16 and 20, but black only has to do so at move 9.
+Move 20 is a blunder for white (it should have been played next to black 19). Black can now force a win against any defence by white, starting with move 21.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Gomoku-game-3.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gomoku-game-3.svg/300px-Gomoku-game-3.svg.png" decoding="async" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gomoku-game-3.svg/450px-Gomoku-game-3.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gomoku-game-3.svg/600px-Gomoku-game-3.svg.png 2x" data-file-width="566" data-file-height="566" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Gomoku-game-3.svg" class="internal" title="Enlarge"></a></div>Second game (continuation from first game)</div></div></div>
+<p>There are two forcing sequences for black, depending on whether white 22 is played next to black 15 or black 21. The diagram on the right shows the first sequence. All the moves for white are forced. Such long forcing sequences are typical in gomoku, and expert players can read out forcing sequences of 20 to 40 moves rapidly and accurately.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Gomoku-game-2.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gomoku-game-2.svg/300px-Gomoku-game-2.svg.png" decoding="async" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gomoku-game-2.svg/450px-Gomoku-game-2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gomoku-game-2.svg/600px-Gomoku-game-2.svg.png 2x" data-file-width="566" data-file-height="566" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Gomoku-game-2.svg" class="internal" title="Enlarge"></a></div>Other second game</div></div></div>
+<p>The diagram on the right shows the second forcing sequence. This diagram shows why white 20 was a blunder; if it had been next to black 19 (at the position of move 32 in this diagram) then black 31 would not be a threat and so the forcing sequence would fail.
+</p>
+<h2><span class="mw-headline" id="World_championships">World championships</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=8" title="Edit section: World championships">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>World Championships in Gomoku have occurred 2 times in 1989, 1991.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+Since 2009 the tournament resumed, the opening rule being played was changed and now is swap2.
+</p><p>List of the tournaments occurred and title holders follows.
+</p>
+<table class="wikitable">
+<caption>World Championship
+</caption>
+<tbody><tr>
+<th>Title year
+</th>
+<th>Hosting city, country
+</th>
+<th>Gold
+</th>
+<th>Silver
+</th>
+<th>Bronze
+</th>
+<th>Opening rule
+</th></tr>
+<tr>
+<td>1989
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/23px-Flag_of_Japan.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/35px-Flag_of_Japan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/45px-Flag_of_Japan.svg.png 2x" data-file-width="900" data-file-height="600" /></span> <a href="/wiki/Kyoto" title="Kyoto">Kyoto</a>, <a href="/wiki/Japan" title="Japan">Japan</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Soviet_Union" title="Soviet Union"><img alt="Soviet Union" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/23px-Flag_of_the_Soviet_Union.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/35px-Flag_of_the_Soviet_Union.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/46px-Flag_of_the_Soviet_Union.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B2,_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%D0%BE%D0%B2%D0%B8%D1%87" class="extiw" title="ru:Чернов, Сергей Станиславович">Sergey Chernov</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Soviet_Union" title="Soviet Union"><img alt="Soviet Union" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/23px-Flag_of_the_Soviet_Union.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/35px-Flag_of_the_Soviet_Union.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/46px-Flag_of_the_Soviet_Union.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2,_%D0%AE%D1%80%D0%B8%D0%B9_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%8C%D0%B5%D0%B2%D0%B8%D1%87" class="extiw" title="ru:Таранников, Юрий Валерьевич">Yuriy Tarannikov</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Japan" title="Japan"><img alt="Japan" src="//upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/23px-Flag_of_Japan.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/35px-Flag_of_Japan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/45px-Flag_of_Japan.svg.png 2x" data-file-width="900" data-file-height="600" /></a></span> <a href="/w/index.php?title=Hirouji_Sakamoto&amp;action=edit&amp;redlink=1" class="new" title="Hirouji Sakamoto (page does not exist)">Hirouji Sakamoto</a>
+</td>
+<td>Pro
+</td></tr>
+<tr>
+<td>1991
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/23px-Flag_of_the_Soviet_Union.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/35px-Flag_of_the_Soviet_Union.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/46px-Flag_of_the_Soviet_Union.svg.png 2x" data-file-width="1200" data-file-height="600" /></span> <a href="/wiki/Moscow" title="Moscow">Moscow</a>, <a href="/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Soviet_Union" title="Soviet Union"><img alt="Soviet Union" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/23px-Flag_of_the_Soviet_Union.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/35px-Flag_of_the_Soviet_Union.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/46px-Flag_of_the_Soviet_Union.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2,_%D0%AE%D1%80%D0%B8%D0%B9_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%8C%D0%B5%D0%B2%D0%B8%D1%87" class="extiw" title="ru:Таранников, Юрий Валерьевич">Yuriy Tarannikov</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Soviet_Union" title="Soviet Union"><img alt="Soviet Union" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/23px-Flag_of_the_Soviet_Union.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/35px-Flag_of_the_Soviet_Union.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/46px-Flag_of_the_Soviet_Union.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/wiki/Ando_Meritee" title="Ando Meritee">Ando Meritee</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Soviet_Union" title="Soviet Union"><img alt="Soviet Union" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/23px-Flag_of_the_Soviet_Union.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/35px-Flag_of_the_Soviet_Union.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/46px-Flag_of_the_Soviet_Union.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B2,_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%D0%BE%D0%B2%D0%B8%D1%87" class="extiw" title="ru:Чернов, Сергей Станиславович">Sergey Chernov</a>
+</td>
+<td>Pro
+</td></tr>
+<tr>
+<td>2009
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/23px-Flag_of_the_Czech_Republic.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/35px-Flag_of_the_Czech_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png 2x" data-file-width="900" data-file-height="600" /></span> <a href="/wiki/Pardubice" title="Pardubice">Pardubice</a>, <a href="/wiki/Czech_Republic" title="Czech Republic">Czech Republic</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Poland" title="Poland"><img alt="Poland" src="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" /></a></span> <a href="/w/index.php?title=Artur_Tamio%C5%82a&amp;action=edit&amp;redlink=1" class="new" title="Artur Tamioła (page does not exist)">Artur Tamioła</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Hungary" title="Hungary"><img alt="Hungary" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/w/index.php?title=Attila_Demj%C3%A1n&amp;action=edit&amp;redlink=1" class="new" title="Attila Demján (page does not exist)">Attila Demján</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Czech_Republic" title="Czech Republic"><img alt="Czech Republic" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/23px-Flag_of_the_Czech_Republic.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/35px-Flag_of_the_Czech_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png 2x" data-file-width="900" data-file-height="600" /></a></span> <a href="/w/index.php?title=Pavel_Laube&amp;action=edit&amp;redlink=1" class="new" title="Pavel Laube (page does not exist)">Pavel Laube</a>
+</td>
+<td>Swap2
+</td></tr>
+<tr>
+<td>2011
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/23px-Flag_of_Sweden.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" /></span> <a href="/wiki/Huskvarna" title="Huskvarna">Huskvarna</a>, <a href="/wiki/Sweden" title="Sweden">Sweden</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Hungary" title="Hungary"><img alt="Hungary" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/w/index.php?title=Attila_Demj%C3%A1n&amp;action=edit&amp;redlink=1" class="new" title="Attila Demján (page does not exist)">Attila Demján</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Poland" title="Poland"><img alt="Poland" src="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" /></a></span> <a href="/w/index.php?title=Artur_Tamio%C5%82a&amp;action=edit&amp;redlink=1" class="new" title="Artur Tamioła (page does not exist)">Artur Tamioła</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Poland" title="Poland"><img alt="Poland" src="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" /></a></span> <a href="/w/index.php?title=Micha%C5%82_%C5%BBukowski&amp;action=edit&amp;redlink=1" class="new" title="Michał Żukowski (page does not exist)">Michał Żukowski</a>
+</td>
+<td>Swap2
+</td></tr>
+<tr>
+<td>2013
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/23px-Flag_of_Estonia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/35px-Flag_of_Estonia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/46px-Flag_of_Estonia.svg.png 2x" data-file-width="990" data-file-height="630" /></span> <a href="/wiki/Tallinn" title="Tallinn">Tallinn</a>, <a href="/wiki/Estonia" title="Estonia">Estonia</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Hungary" title="Hungary"><img alt="Hungary" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/w/index.php?title=Attila_Demj%C3%A1n&amp;action=edit&amp;redlink=1" class="new" title="Attila Demján (page does not exist)">Attila Demján</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Czech_Republic" title="Czech Republic"><img alt="Czech Republic" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/23px-Flag_of_the_Czech_Republic.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/35px-Flag_of_the_Czech_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png 2x" data-file-width="900" data-file-height="600" /></a></span> <a href="/w/index.php?title=Pavel_Laube&amp;action=edit&amp;redlink=1" class="new" title="Pavel Laube (page does not exist)">Pavel Laube</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Russia" title="Russia"><img alt="Russia" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/23px-Flag_of_Russia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" /></a></span> <a href="/w/index.php?title=Mikhail_Kozhin&amp;action=edit&amp;redlink=1" class="new" title="Mikhail Kozhin (page does not exist)">Mikhail Kozhin</a>
+</td>
+<td>Swap2
+</td></tr>
+<tr>
+<td>2015
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/23px-Flag_of_Russia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" /></span> <a href="/wiki/Suzdal" title="Suzdal">Suzdal</a>, <a href="/wiki/Russia" title="Russia">Russia</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Hungary" title="Hungary"><img alt="Hungary" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/w/index.php?title=Rudolf_Dupszki&amp;action=edit&amp;redlink=1" class="new" title="Rudolf Dupszki (page does not exist)">Rudolf Dupszki</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Hungary" title="Hungary"><img alt="Hungary" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/w/index.php?title=Gerg%C5%91_T%C3%B3th&amp;action=edit&amp;redlink=1" class="new" title="Gergő Tóth (page does not exist)">Gergő Tóth</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Russia" title="Russia"><img alt="Russia" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/23px-Flag_of_Russia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" /></a></span> <a href="/w/index.php?title=Mikhail_Kozhin&amp;action=edit&amp;redlink=1" class="new" title="Mikhail Kozhin (page does not exist)">Mikhail Kozhin</a>
+</td>
+<td>Swap2
+</td></tr>
+<tr>
+<td>2017
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/23px-Flag_of_the_Czech_Republic.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/35px-Flag_of_the_Czech_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png 2x" data-file-width="900" data-file-height="600" /></span> <a href="/wiki/Prague" title="Prague">Prague</a>, <a href="/wiki/Czech_Republic" title="Czech Republic">Czech Republic</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Hungary" title="Hungary"><img alt="Hungary" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/w/index.php?title=Zolt%C3%A1n_L%C3%A1szl%C3%B3&amp;action=edit&amp;redlink=1" class="new" title="Zoltán László (page does not exist)">Zoltán László</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Hungary" title="Hungary"><img alt="Hungary" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" /></a></span> <a href="/w/index.php?title=Rudolf_Dupszki&amp;action=edit&amp;redlink=1" class="new" title="Rudolf Dupszki (page does not exist)">Rudolf Dupszki</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Russia" title="Russia"><img alt="Russia" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/23px-Flag_of_Russia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" /></a></span> <a href="/w/index.php?title=Denis_Osipov_(gomoku_player)&amp;action=edit&amp;redlink=1" class="new" title="Denis Osipov (gomoku player) (page does not exist)">Denis Osipov</a>
+</td>
+<td>Swap2
+</td></tr>
+<tr>
+<td>2019
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/23px-Flag_of_Estonia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/35px-Flag_of_Estonia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/46px-Flag_of_Estonia.svg.png 2x" data-file-width="990" data-file-height="630" /></span> <a href="/wiki/Tallinn" title="Tallinn">Tallinn</a>, <a href="/wiki/Estonia" title="Estonia">Estonia</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Czech_Republic" title="Czech Republic"><img alt="Czech Republic" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/23px-Flag_of_the_Czech_Republic.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/35px-Flag_of_the_Czech_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png 2x" data-file-width="900" data-file-height="600" /></a></span> <a href="/w/index.php?title=Martin_Muzika&amp;action=edit&amp;redlink=1" class="new" title="Martin Muzika (page does not exist)">Martin Muzika</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Ukraine" title="Ukraine"><img alt="Ukraine" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/23px-Flag_of_Ukraine.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/35px-Flag_of_Ukraine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/45px-Flag_of_Ukraine.svg.png 2x" data-file-width="1200" data-file-height="800" /></a></span> <a href="/w/index.php?title=Oleg_Bulatowsky&amp;action=edit&amp;redlink=1" class="new" title="Oleg Bulatowsky (page does not exist)">Oleg Bulatowsky</a>
+</td>
+<td><span class="flagicon"><a href="/wiki/Poland" title="Poland"><img alt="Poland" src="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" /></a></span> <a href="/w/index.php?title=Micha%C5%82_%C5%BBukowski&amp;action=edit&amp;redlink=1" class="new" title="Michał Żukowski (page does not exist)">Michał Żukowski</a>
+</td>
+<td>Swap2
+</td></tr></tbody></table>
+<table class="wikitable">
+<caption>Team World Championship
+</caption>
+<tbody><tr>
+<th>Title year
+</th>
+<th>Hosting city, country
+</th>
+<th>Gold
+</th>
+<th>Silver
+</th>
+<th>Bronze
+</th>
+<th>Opening rule
+</th></tr>
+<tr style="vertical-align: top;">
+<td>2016
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/23px-Flag_of_Estonia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/35px-Flag_of_Estonia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/46px-Flag_of_Estonia.svg.png 2x" data-file-width="990" data-file-height="630" /></span> <a href="/wiki/Tallinn" title="Tallinn">Tallinn</a>, <a href="/wiki/Estonia" title="Estonia">Estonia</a>
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" />&#160;</span><a href="/wiki/Poland" title="Poland">Poland</a> <br /> Michał Żukowski <br /> Michał Zajk <br /> Łukasz Majksner <br /> Piotr Małowiejski
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/23px-Flag_of_the_Czech_Republic.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/35px-Flag_of_the_Czech_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png 2x" data-file-width="900" data-file-height="600" />&#160;</span><a href="/wiki/Czech_Republic" title="Czech Republic">Czech Republic</a> <br /> Pavel Laube <br /> Igor Eged <br /> Štěpán Tesařík <br /> Marek Hanzl
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/14/Flag_of_Chinese_Taipei_for_Olympic_games.svg/23px-Flag_of_Chinese_Taipei_for_Olympic_games.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/14/Flag_of_Chinese_Taipei_for_Olympic_games.svg/35px-Flag_of_Chinese_Taipei_for_Olympic_games.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/14/Flag_of_Chinese_Taipei_for_Olympic_games.svg/45px-Flag_of_Chinese_Taipei_for_Olympic_games.svg.png 2x" data-file-width="900" data-file-height="600" />&#160;</span><a href="/wiki/Chinese_Taipei" title="Chinese Taipei">Chinese Taipei</a> <br /> Lu Wei-Yuan <br /> Chen Ko-Han <br /> Chang Yi-Feng <br /> Sung Pei-Jung
+</td>
+<td>Swap2
+</td></tr>
+<tr>
+<td>2018
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" /></span> <a href="/wiki/P%C5%82ock" title="Płock">Płock</a>, <a href="/wiki/Poland" title="Poland">Poland</a>
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/23px-Flag_of_Russia.svg.png" decoding="async" width="23" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" />&#160;</span><a href="/wiki/Russia" title="Russia">Russia</a>-1 <br /> Edvard Rizvanov <br /> Denis Osipov <br /> Ilya Muratov <br /> Maksim Karasev <br /> Mikhail Kozhin
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600" />&#160;</span><a href="/wiki/Hungary" title="Hungary">Hungary</a> <br /> Zoltán László <br />  Gergő Tóth <br />  Márk Horváth <br /> Gábor Gyenes <br />  Attila Hegedűs
+</td>
+<td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" />&#160;</span><a href="/wiki/Poland" title="Poland">Poland</a> <br /> Łukasz Majksner <br /> Michał Żukowski <br /> Michał Zajk <br /> Marek Gorzecki <br /> Paweł Tarasiński
+</td>
+<td>Swap2
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Computers_and_Gomoku">Computers and Gomoku</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=9" title="Edit section: Computers and Gomoku">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>People have been applying <a href="/wiki/Artificial_intelligence" title="Artificial intelligence">artificial intelligence</a> techniques on playing gomoku for several decades. In 1994, <a href="/wiki/L._Victor_Allis" class="mw-redirect" title="L. Victor Allis">L. Victor Allis</a> raised the algorithm of proof-number search (pn-search) and dependency-based search (db-search), and proved that when starting from an empty 15&#215;15 board, the first player has a winning strategy using these searching algorithms.<sup id="cite_ref-:0_7-1" class="reference"><a href="#cite_note-:0-7">&#91;7&#93;</a></sup> This applies to both free-style gomoku and standard gomoku without any opening rules. It seems very likely that black wins on larger boards too. In any size of a board, freestyle gomoku is an <a href="/wiki/M,n,k-game" title="M,n,k-game"><i>m</i>,<i>n</i>,<i>k</i>-game</a>, hence it is known that the first player can enforce a win or a draw. In 2001, Allis' winning strategy was also approved for renju, a variation of gomoku, when there was no limitation on the opening stage.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p><p>However, neither the theoretical values of all legal positions, nor the opening rules such as Swap2 used by the professional gomoku players have been solved yet, so the topic of gomoku artificial intelligence is still a challenge for computer scientists, such as the problem on how to improve the gomoku algorithms to make them more strategic and competitive. Nowadays, most of the state-of-the-art gomoku algorithms are based on the <a href="/wiki/Alpha-beta_pruning" class="mw-redirect" title="Alpha-beta pruning">alpha-beta pruning</a> framework.
+</p><p>Reisch proved that <a href="/wiki/Generalized_game" title="Generalized game">Generalized</a> gomoku is <a href="/wiki/PSPACE-complete" title="PSPACE-complete">PSPACE-complete</a>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> He also observed that the reduction can be adapted to the rules of k-in-a-Row for fixed k. Although he did not specify exactly which values of k are allowed, the reduction would appear to generalize to any k ≥ 5.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+</p><p>There exist several well-known tournaments for gomoku programs since 1989. The <a href="/wiki/Computer_Olympiad" title="Computer Olympiad">Computer Olympiad</a> started with the gomoku game in 1989, but gomoku has not been in the list since 1993.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> The Renju World Computer Championship was started in 1991, and held for 4 times until 2004.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup> The <a href="/wiki/Gomocup" title="Gomocup">Gomocup</a> tournament is played since 2000 and taking place every year, still active now, with more than 30 participants from about 10 countries.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> The Hungarian Computer Go-Moku Tournament was also played twice in 2005.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup> There were also two Computer vs. Human tournaments played in the Czech Republic, in 2006 and 2011.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> Not until 2017 were the computer programs proved to be able to outperform the world human champion in public competitions. In the Gomoku World Championship 2017, there was a match between the world champion program Yixin and the world champion human player Rudolf Dupszki. Yixin won the match with a score of 2-0.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup><sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Renju" title="Renju">Renju</a></li>
+<li><a href="/wiki/Pente" title="Pente">Pente</a></li>
+<li><a href="/wiki/Pegity" title="Pegity">Pegity</a></li>
+<li><a href="/wiki/Connect6" title="Connect6">Connect6</a></li>
+<li><a href="/wiki/Connect_Four" title="Connect Four">Connect Four</a></li>
+<li><a href="/wiki/Advanced_tic_tac_toe" class="mw-redirect" title="Advanced tic tac toe">Advanced tic tac toe</a></li>
+<li><a href="/wiki/Connection_game" title="Connection game">Connection game</a></li>
+<li><a href="/wiki/Board_game" title="Board game">Board game</a></li>
+<li><a href="/wiki/Solved_game" title="Solved game">Solved board games</a></li>
+<li><a href="/wiki/Game_theory" title="Game theory">Game theory</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140326000833/http://www.japan-101.com/culture/gomoku_japanese_board_game.htm">"Gomoku - Japanese Board Game"</a>. Japan 101. Archived from <a rel="nofollow" class="external text" href="http://www.japan-101.com/culture/gomoku_japanese_board_game.htm">the original</a> on 2014-03-26<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-06-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Gomoku+-+Japanese+Board+Game&amp;rft.pub=Japan+101&amp;rft_id=http%3A%2F%2Fwww.japan-101.com%2Fculture%2Fgomoku_japanese_board_game.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r886058088">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book">Lasker, Edward (1960). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/gogomokuoriental00lask"><i>Go and go-moku: the oriental board games</i></a></span> (2nd rev. ed.). New York: Dover.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Go+and+go-moku%3A+the+oriental+board+games&amp;rft.place=New+York&amp;rft.edition=2nd+rev.&amp;rft.pub=Dover&amp;rft.date=1960&amp;rft.aulast=Lasker&amp;rft.aufirst=Edward&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fgogomokuoriental00lask&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-hzx-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-hzx_3-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Huang Zunxian, Chen Zheng (2005). <i>《黄遵宪全集》第2卷</i> (in Chinese). China: Zhonghua Book Company. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9787101044904" title="Special:BookSources/9787101044904"><bdi>9787101044904</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%E3%80%8A%E9%BB%84%E9%81%B5%E5%AE%AA%E5%85%A8%E9%9B%86%E3%80%8B%E7%AC%AC2%E5%8D%B7&amp;rft.place=China&amp;rft.pub=Zhonghua+Book+Company&amp;rft.date=2005&amp;rft.isbn=9787101044904&amp;rft.au=Huang+Zunxian%2C+Chen+Zheng&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">OED citations: <b>1886</b> GUILLEMARD <i>Cruise ‘Marchesa’</i> I. 267 Some of the games are purely Japanese..as <i>go-ban</i>. <i>Note</i>, This game is the one lately introduced into England under the misspelt name of Go Bang. <b>1888</b> <i>Pall Mall Gazette</i> 1. Nov. 3/1 These young persons...played go-bang and cat's cradle.
+The board below shows the three types of winning arrangements as they might appear on an 8x8 Petteia board. Obviously the cramped conditions would result in a draw most of the time, depending on the rules. Play would be easier on a larger Latrunculi board of 12x8 or even 10x11.
+.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://renju.net/media/showrule.php?rule=11">"Gomoku - swap2 rule"</a>. <i>renju.net</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=renju.net&amp;rft.atitle=Gomoku+-+swap2+rule&amp;rft_id=http%3A%2F%2Frenju.net%2Fmedia%2Fshowrule.php%3Frule%3D11&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://gomokuworld.com/gomoku/2">http://gomokuworld.com/gomoku/2</a></span>
+</li>
+<li id="cite_note-:0-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book"><a href="/wiki/L._Victor_Allis" class="mw-redirect" title="L. Victor Allis">L. Victor Allis</a> (1994). <a rel="nofollow" class="external text" href="https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.99.5364"><i>Searching for Solutions in Games and Artificial Intelligence</i></a> <span class="cs1-format">(PDF)</span>. Ph.D. thesis, University of Limburg, The Netherlands. pp.&#160;121–154. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/90-900748-8-0" title="Special:BookSources/90-900748-8-0"><bdi>90-900748-8-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Searching+for+Solutions+in+Games+and+Artificial+Intelligence&amp;rft.pages=121-154&amp;rft.pub=Ph.D.+thesis%2C+University+of+Limburg%2C+The+Netherlands&amp;rft.date=1994&amp;rft.isbn=90-900748-8-0&amp;rft.au=L.+Victor+Allis&amp;rft_id=https%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.99.5364&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Allis, L. V., Herik, H. J., &amp; Huntjens, M. P. H. (1993). <i>Go-moku and threat-space search</i>. University of Limburg, Department of Computer Science.</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.renju.net/media/gwc.php">"The Renju International Federation portal - RenjuNet"</a>. Renju.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-10-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Renju+International+Federation+portal+-+RenjuNet&amp;rft.pub=Renju.net&amp;rft_id=http%3A%2F%2Fwww.renju.net%2Fmedia%2Fgwc.php&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation journal">J. Wágner and I. Virág (Mar 2001). <a rel="nofollow" class="external text" href="https://pdfs.semanticscholar.org/0cc4/0a7750b14ccf417faa39ac292e8d096617bc.pdf">"Solving Renju"</a> <span class="cs1-format">(PDF)</span>. <i>ICGA Journal</i>. <b>24</b> (1): 30–35. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.3233%2FICG-2001-24104">10.3233/ICG-2001-24104</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ICGA+Journal&amp;rft.atitle=Solving+Renju&amp;rft.volume=24&amp;rft.issue=1&amp;rft.pages=30-35&amp;rft.date=2001-03&amp;rft_id=info%3Adoi%2F10.3233%2FICG-2001-24104&amp;rft.au=J.+W%C3%A1gner+and+I.+Vir%C3%A1g&amp;rft_id=https%3A%2F%2Fpdfs.semanticscholar.org%2F0cc4%2F0a7750b14ccf417faa39ac292e8d096617bc.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation journal">Stefan Reisch (1980). "Gobang ist PSPACE-vollständig (Gomoku is PSPACE-complete)". <i>Acta Informatica</i>. <b>13</b>: 59–66. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//doi.org/10.1007%2Fbf00288536">10.1007/bf00288536</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Acta+Informatica&amp;rft.atitle=Gobang+ist+PSPACE-vollst%C3%A4ndig+%28Gomoku+is+PSPACE-complete%29&amp;rft.volume=13&amp;rft.pages=59-66&amp;rft.date=1980&amp;rft_id=info%3Adoi%2F10.1007%2Fbf00288536&amp;rft.au=Stefan+Reisch&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation arxiv">Demaine, Erik; Hearn, Robert (2001). "Playing Games with Algorithms: Algorithmic Combinatorial Game Theory". <a href="/wiki/ArXiv" title="ArXiv">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/cs/0106019v2">cs/0106019v2</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=preprint&amp;rft.jtitle=arXiv&amp;rft.atitle=Playing+Games+with+Algorithms%3A+Algorithmic+Combinatorial+Game+Theory&amp;rft.date=2001&amp;rft_id=info%3Aarxiv%2Fcs%2F0106019v2&amp;rft.aulast=Demaine&amp;rft.aufirst=Erik&amp;rft.au=Hearn%2C+Robert&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.game-ai-forum.org/icga-tournaments/game.php?id=30">"Go-Moku (ICGA Tournaments)"</a>. <i>game-ai-forum.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=game-ai-forum.org&amp;rft.atitle=Go-Moku+%28ICGA+Tournaments%29&amp;rft_id=http%3A%2F%2Fwww.game-ai-forum.org%2Ficga-tournaments%2Fgame.php%3Fid%3D30&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.5stone.net/wc/worldcup_en.html">"Renju Computer World Championship"</a>. <i>5stone.net</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=5stone.net&amp;rft.atitle=Renju+Computer+World+Championship&amp;rft_id=http%3A%2F%2Fwww.5stone.net%2Fwc%2Fworldcup_en.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://nosovsky.narod.ru/forth.html">"4-th World Championship among Computer programs"</a>. <i>Nosovsky Japanese Games Home Page</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Nosovsky+Japanese+Games+Home+Page&amp;rft.atitle=4-th+World+Championship+among+Computer+programs&amp;rft_id=http%3A%2F%2Fnosovsky.narod.ru%2Fforth.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160604205643/http://gomocup.org/home/">"Gomocup - The Gomoku AI Tournament"</a>. <i>Gomocup</i>. Archived from <a rel="nofollow" class="external text" href="http://gomocup.org/home/">the original</a> on 2016-06-04<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Gomocup&amp;rft.atitle=Gomocup+-+The+Gomoku+AI+Tournament&amp;rft_id=http%3A%2F%2Fgomocup.org%2Fhome%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://gomokuworld.com/articles/hungarian_computer_gomoku_tournament_2005">"Hungarian Computer Gomoku Tournament 2005 | GomokuWorld.com"</a>. <i>gomokuworld.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=gomokuworld.com&amp;rft.atitle=Hungarian+Computer+Gomoku+Tournament+2005+%7C+GomokuWorld.com&amp;rft_id=http%3A%2F%2Fgomokuworld.com%2Farticles%2Fhungarian_computer_gomoku_tournament_2005&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.sze.hu/~gtakacs/tournament/index.html">"2nd Hungarian Computer Go-Moku Open Tournament"</a>. <i>sze.hu</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=sze.hu&amp;rft.atitle=2nd+Hungarian+Computer+Go-Moku+Open+Tournament&amp;rft_id=http%3A%2F%2Fwww.sze.hu%2F~gtakacs%2Ftournament%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://gomocup.org/results/ai-human-2006">"The 1st tournament AI vs. Human (November the 11th, 2006) | Gomocup"</a>. <i>gomocup.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=gomocup.org&amp;rft.atitle=The+1st+tournament+AI+vs.+Human+%28November+the+11th%2C+2006%29+%7C+Gomocup&amp;rft_id=http%3A%2F%2Fgomocup.org%2Fresults%2Fai-human-2006&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.piskvorky.cz/clanky/zajimavosti-ze-sveta-piskvorek-a-renju/ai-vs-clovek-2011-2/">"AI vs. Člověk 2011 | Česká federace piškvorek a renju"</a>. <i>piskvorky.cz</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=piskvorky.cz&amp;rft.atitle=AI+vs.+%C4%8Clov%C4%9Bk+2011+%7C+%C4%8Cesk%C3%A1+federace+pi%C5%A1kvorek+a+renju&amp;rft_id=http%3A%2F%2Fwww.piskvorky.cz%2Fclanky%2Fzajimavosti-ze-sveta-piskvorek-a-renju%2Fai-vs-clovek-2011-2%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.aiexp.info/ai-vs-human-gomoku-2.html">"Rudolf Dupszki versus Yixin"</a>. <i>AIEXP</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=AIEXP&amp;rft.atitle=Rudolf+Dupszki+versus+Yixin&amp;rft_id=http%3A%2F%2Fwww.aiexp.info%2Fai-vs-human-gomoku-2.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.facebook.com/notes/gomokuworld/rudolf-dupszki-vs-yixin-2017/857225044431377/">"Rudolf Dupszki vs. Yixin 2017"</a>. <i>Facebook</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Facebook&amp;rft.atitle=Rudolf+Dupszki+vs.+Yixin+2017&amp;rft_id=https%3A%2F%2Fwww.facebook.com%2Fnotes%2Fgomokuworld%2Frudolf-dupszki-vs-yixin-2017%2F857225044431377%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGomoku" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=12" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Five-in-a-Row (Renju) For Beginners to Advanced Players <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/4-87187-301-3" title="Special:BookSources/4-87187-301-3">4-87187-301-3</a></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Gomoku&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://gomokuworld.com/">Gomoku World</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.renju.net/">Renju International Federation website</a></li>
+<li><a rel="nofollow" class="external text" href="http://gomocup.org/">Gomocup tournament</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Tic-Tac-Toe" style="padding:3px"><table class="nowraplinks mw-collapsible expanded navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="3"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Tic-Tac-Toe" title="Template:Tic-Tac-Toe"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Tic-Tac-Toe" title="Template talk:Tic-Tac-Toe"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Tic-Tac-Toe&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Tic-Tac-Toe" style="font-size:114%;margin:0 4em"><a href="/wiki/Tic-tac-toe" title="Tic-tac-toe">Tic-Tac-Toe</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Tic-tac-toe_variants" title="Tic-tac-toe variants">Tic-Tac-Toe variants</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/3D_tic-tac-toe" title="3D tic-tac-toe">3D tic-tac-toe</a></li>
+<li><a class="mw-selflink selflink">Gomoku</a></li>
+<li><a href="/wiki/Notakto" title="Notakto">Notakto</a></li>
+<li><a href="/wiki/Number_Scrabble" title="Number Scrabble">Number Scrabble</a></li>
+<li><a href="/wiki/Order_and_Chaos" title="Order and Chaos">Order and Chaos</a></li>
+<li><a href="/wiki/Pente" title="Pente">Pente</a></li>
+<li><a href="/wiki/Quantum_tic-tac-toe" title="Quantum tic-tac-toe">Quantum tic-tac-toe</a></li>
+<li><a href="/wiki/Renju" title="Renju">Renju</a></li>
+<li><a href="/wiki/SOS_(game)" title="SOS (game)">SOS</a></li>
+<li><a href="/wiki/Treblecross" title="Treblecross">Treblecross</a></li>
+<li><a href="/wiki/Ultimate_tic-tac-toe" title="Ultimate tic-tac-toe">Ultimate tic-tac-toe</a></li>
+<li><a href="/wiki/Wild_tic-tac-toe" title="Wild tic-tac-toe">Wild tic-tac-toe</a></li>
+<li><a href="/wiki/Tic-tac-toe_variants" title="Tic-tac-toe variants">List</a></li></ul>
+</div></td><td class="navbox-image" rowspan="3" style="width:1px;padding:0px 0px 0px 2px"><div><a href="/wiki/File:Tic_tac_toe.svg" class="image" title="Frameless"><img alt="Frameless" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/120px-Tic_tac_toe.svg.png" decoding="async" width="120" height="107" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/180px-Tic_tac_toe.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/240px-Tic_tac_toe.svg.png 2x" data-file-width="522" data-file-height="464" /></a></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related concepts</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/M,n,k-game" title="M,n,k-game">m,n,k-game</a></li>
+<li><a href="/wiki/Nd_game" title="Nd game">n<sup>d</sup> game</a></li>
+<li><a href="/wiki/Kaplansky%27s_game" title="Kaplansky&#39;s game">Kaplansky's game</a></li>
+<li><a href="/wiki/Harary%27s_generalized_tic-tac-toe" title="Harary&#39;s generalized tic-tac-toe">Harary's generalized tic-tac-toe</a></li>
+<li><a href="/wiki/Hales%E2%80%93Jewett_theorem" title="Hales–Jewett theorem">Hales–Jewett theorem</a></li>
+<li><a href="/wiki/Strategy-stealing_argument" title="Strategy-stealing argument">Strategy-stealing argument</a></li>
+<li><a href="/wiki/Futile_game" title="Futile game">Futile game</a></li>
+<li><a href="/wiki/Paper-and-pencil_game" title="Paper-and-pencil game">Paper-and-pencil game</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Similar games</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Nine_men%27s_morris" title="Nine men&#39;s morris">Nine men's morris</a></li>
+<li><a href="/wiki/Score_Four" title="Score Four">Score Four</a>
+<ul><li>Tic-Stac-Toe</li></ul></li>
+<li><a href="/wiki/Gobblet" title="Gobblet">Gobblet</a></li>
+<li><i><a href="/wiki/Quarto_(board_game)" title="Quarto (board game)">Quarto</a></i></li>
+<li><a href="/wiki/Three_men%27s_morris" title="Three men&#39;s morris">Three men's morris</a></li>
+<li><a href="/wiki/Nine_Holes" title="Nine Holes">Nine Holes</a></li>
+<li><a href="/wiki/Achi_(game)" title="Achi (game)">Achi</a></li>
+<li><a href="/wiki/Connect_Four" title="Connect Four">Connect Four</a></li>
+<li><a href="/wiki/Connect6" title="Connect6">Connect6</a></li>
+<li><a href="/wiki/OXO" title="OXO">OXO</a></li>
+<li><a href="/wiki/Toss_Across" title="Toss Across">Toss Across</a></li>
+<li><a href="/wiki/Pentago" title="Pentago">Pentago</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1283
+Cached time: 20191230032047
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.668 seconds
+Real time usage: 1.007 seconds
+Preprocessor visited node count: 5642/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 62273/2097152 bytes
+Template argument size: 4306/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 3/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 57632/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.361/10.000 seconds
+Lua memory usage: 14.02 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  874.180      1 -total
+ 20.50%  179.183     13 Template:Cite_web
+ 18.52%  161.904      1 Template:Nihongo
+ 13.67%  119.498      2 Template:Cite_journal
+  7.30%   63.844      1 Template:More_citations_needed
+  6.71%   58.634      1 Template:Infobox_game
+  6.61%   57.807      1 Template:Ambox
+  5.34%   46.719     24 Template:Flagicon
+  5.29%   46.240      1 Template:Cite_arxiv
+  5.29%   46.211      1 Template:Infobox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:12902-0!canonical and timestamp 20191230032047 and revision id 933127951
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Gomoku&amp;oldid=933127951">https://en.wikipedia.org/w/index.php?title=Gomoku&amp;oldid=933127951</a>"</div>
+		
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Abstract_strategy_games" title="Category:Abstract strategy games">Abstract strategy games</a></li><li><a href="/wiki/Category:Traditional_board_games" title="Category:Traditional board games">Traditional board games</a></li><li><a href="/wiki/Category:Japanese_games" title="Category:Japanese games">Japanese games</a></li><li><a href="/wiki/Category:Japanese_inventions" title="Category:Japanese inventions">Japanese inventions</a></li><li><a href="/wiki/Category:Paper-and-pencil_games" title="Category:Paper-and-pencil games">Paper-and-pencil games</a></li><li><a href="/wiki/Category:PSPACE-complete_problems" title="Category:PSPACE-complete problems">PSPACE-complete problems</a></li><li><a href="/wiki/Category:In-a-row_games" title="Category:In-a-row games">In-a-row games</a></li><li><a href="/wiki/Category:Solved_games" title="Category:Solved games">Solved games</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_Chinese-language_sources_(zh)" title="Category:CS1 Chinese-language sources (zh)">CS1 Chinese-language sources (zh)</a></li><li><a href="/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="/wiki/Category:Articles_containing_Japanese-language_text" title="Category:Articles containing Japanese-language text">Articles containing Japanese-language text</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_August_2007" title="Category:Articles needing additional references from August 2007">Articles needing additional references from August 2007</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+						<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+			<h3 id="p-personal-label">Personal tools</h3>
+			<ul>
+				<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Gomoku" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Gomoku" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>			</ul>
+		</div>
+						<div id="left-navigation">
+					
+<div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul >
+		<li id="ca-nstab-main" class="selected"><a href="/wiki/Gomoku" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Gomoku" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+	</ul>
+</div>
+		<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+			<h3 id="p-variants-label">
+				<span>Variants</span>
+			</h3>
+			<ul class="menu">
+							</ul>
+		</div>
+						</div>
+				<div id="right-navigation">
+					
+<div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul >
+		<li id="ca-view" class="collapsible selected"><a href="/wiki/Gomoku">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Gomoku&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Gomoku&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+	</ul>
+</div>
+		<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+			<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+			<h3 id="p-cactions-label"><span>More</span></h3>
+			<ul class="menu">
+							</ul>
+		</div>
+		
+<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" value="Special:Search" name="title"/>
+			
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+			<h3 id="p-interaction-label">Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Gomoku" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Gomoku" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Gomoku&amp;oldid=933127951" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Gomoku&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q908381" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Gomoku&amp;id=933127951" title="Information on how to cite this page">Cite this page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-wikibase-otherprojects" aria-labelledby="p-wikibase-otherprojects-label">
+			<h3 id="p-wikibase-otherprojects-label">In other projects</h3>
+			<div class="body">
+								<ul>
+					<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Gomoku" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/5_in_a_Row/Gomoku" hreflang="en">Wikibooks</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Gomoku">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Gomoku&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Gomoku&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">Languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Gomoku" title="Gomoku – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/F%C3%BCnf_in_eine_Reihe" title="Fünf in eine Reihe – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Gomoku" title="Gomoku – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Go-moku" title="Go-moku – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Gomokuo" title="Gomokuo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Gomoku" title="Gomoku – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%98%A4%EB%AA%A9" title="오목 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Gomoku" title="Gomoku – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Gomoku" title="Gomoku – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Gomoku" title="Gomoku – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Go-bang" title="Go-bang – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E4%BA%94%E7%9B%AE%E4%B8%A6%E3%81%B9" title="五目並べ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Gomoku" title="Gomoku – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Gomoku" title="Gomoku – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%BC%D0%BE%D0%BA%D1%83" title="Гомоку – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Gomoku" title="Gomoku – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Gomoku" title="Gomoku – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Luffarschack" title="Luffarschack – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B9%82%E0%B8%81%E0%B9%82%E0%B8%A1%E0%B8%81%E0%B8%B8" title="โกโมกุ – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D2%90%D0%BE%D0%BC%D0%BE%D0%BA%D1%83" title="Ґомоку – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/C%E1%BB%9D_ca-r%C3%B4" title="Cờ ca-rô – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E4%BA%94%E5%AD%90%E6%A3%8B" title="五子棋 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q908381#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 30 December 2019, at 03:20<span class="anonymous-show">&#160;(UTC)</span>.</li>
+								<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+								<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+								<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/v2/#/en.wikipedia.org">Statistics</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+								<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Gomoku&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.668","walltime":"1.007","ppvisitednodes":{"value":5642,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":62273,"limit":2097152},"templateargumentsize":{"value":4306,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":3,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":57632,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  874.180      1 -total"," 20.50%  179.183     13 Template:Cite_web"," 18.52%  161.904      1 Template:Nihongo"," 13.67%  119.498      2 Template:Cite_journal","  7.30%   63.844      1 Template:More_citations_needed","  6.71%   58.634      1 Template:Infobox_game","  6.61%   57.807      1 Template:Ambox","  5.34%   46.719     24 Template:Flagicon","  5.29%   46.240      1 Template:Cite_arxiv","  5.29%   46.211      1 Template:Infobox"]},"scribunto":{"limitreport-timeusage":{"value":"0.361","limit":"10.000"},"limitreport-memusage":{"value":14703668,"limit":52428800}},"cachereport":{"origin":"mw1283","timestamp":"20191230032047","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Gomoku","url":"https:\/\/en.wikipedia.org\/wiki\/Gomoku","sameAs":"http:\/\/www.wikidata.org\/entity\/Q908381","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q908381","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-12-04T01:51:12Z","dateModified":"2019-12-30T03:20:47Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/6\/69\/Renju.jpg","headline":"board game"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":98,"wgHostname":"mw1251"});});</script>
+</body>
+</html>

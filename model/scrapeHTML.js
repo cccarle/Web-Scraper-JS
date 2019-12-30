@@ -7,32 +7,29 @@ let linkArray = []
 let wordArray = []
 
 /* 
-For each html file in '../rawHTML'
+For each html file in '../html' folder.
 Scrape for links & words
 */
 
 const scrapeHTML = () => {
-  readFiles(
-    path.resolve(__dirname, '../html'),
-    async function(filename, content) {
-      const $ = cheerio.load(content)
-      const body = $('div .mw-parser-output')
+  readFiles(path.resolve(__dirname, '../html'), async function(
+    filename,
+    content
+  ) {
+    const $ = cheerio.load(content)
+    const body = $('div .mw-parser-output')
 
-      let articalName = $('h1').text()
+    let articalName = $('h1').text()
 
-      findWords($, 'div .mw-parser-output *')
-      findLinks($, body)
+    findWords($, 'div .mw-parser-output *')
+    findLinks($, body)
 
-      saveLinks(articalName, linkArray)
-      saveWords(articalName, wordArray)
+    saveLinks(articalName, linkArray)
+    saveWords(articalName, wordArray)
 
-      linkArray = []
-      wordArray = []
-    },
-    error => {
-      //console.error(error)
-    }
-  )
+    linkArray = []
+    wordArray = []
+  })
 }
 
 /* 
@@ -88,7 +85,7 @@ const saveLinks = (articalName, linkArray) => {
     linkArray.map(link => link + '\n'),
     err => {
       if (err) {
-        // return console.log(err)
+        let error = err
       }
     }
   )
@@ -107,7 +104,7 @@ const saveWords = (articalName, words) => {
       ),
       err => {
         if (err) {
-          // return console.log(err)
+          let error = err
         }
       }
     )

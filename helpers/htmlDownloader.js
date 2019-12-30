@@ -85,8 +85,8 @@ const fetchHTML = async link => {
         got.stream(link),
         fs.createWriteStream(`./html/${html_page_name + count}.html`)
       )
-    } catch (error) {
-      // console.error(error)
+    } catch (err) {
+      let error = err
     }
   }
 }
