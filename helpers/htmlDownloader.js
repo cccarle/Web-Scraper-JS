@@ -83,7 +83,7 @@ const fetchHTML = async link => {
     try {
       await pipeline(
         got.stream(link),
-        fs.createWriteStream(`./rawHTML/${html_page_name + count}.html`)
+        fs.createWriteStream(`./html/${html_page_name + count}.html`)
       )
     } catch (error) {
       // console.error(error)

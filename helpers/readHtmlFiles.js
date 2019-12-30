@@ -17,7 +17,6 @@ function readFiles(dirname, onFileContent, onError) {
         content
       ) {
         if (err) {
-          onError(err)
           return
         }
         onFileContent(filename, content)

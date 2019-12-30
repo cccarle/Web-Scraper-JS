@@ -13,7 +13,7 @@ Scrape for links & words
 
 const scrapeHTML = () => {
   readFiles(
-    path.resolve(__dirname, '../rawHTML'),
+    path.resolve(__dirname, '../html'),
     async function(filename, content) {
       const $ = cheerio.load(content)
       const body = $('div .mw-parser-output')
